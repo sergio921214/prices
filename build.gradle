@@ -22,15 +22,17 @@ repositories {
 }
 
 dependencies {
-	implementation 'org.mapstruct:mapstruct:1.4.2.Final'
+	compileOnly 'org.projectlombok:lombok'
+	runtimeOnly 'com.h2database:h2'
 	annotationProcessor 'org.mapstruct:mapstruct-processor:1.4.2.Final'
+	annotationProcessor 'org.projectlombok:lombok'
 	implementation "org.flywaydb:flyway-core:9.8.1"
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	runtimeOnly 'com.h2database:h2'
-	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	testImplementation 'org.projectlombok:lombok:1.18.26'
+	testImplementation 'org.flywaydb.flyway-test-extensions:flyway-spring-test:9.5.0'
+	testImplementation 'junit:junit:4.13.1'
 }
 
 tasks.named('test') {

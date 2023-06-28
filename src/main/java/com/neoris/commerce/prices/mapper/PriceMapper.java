@@ -2,7 +2,6 @@ package com.neoris.commerce.prices.mapper;
 
 import com.neoris.commerce.prices.model.PriceResponse;
 import com.neoris.commerce.prices.model.entity.Price;
-import org.mapstruct.Mapper;
 import org.springframework.stereotype.Component;
 
 @Component

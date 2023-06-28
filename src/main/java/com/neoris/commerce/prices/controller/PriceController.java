@@ -1,7 +1,6 @@
 package com.neoris.commerce.prices.controller;
 
 import com.neoris.commerce.prices.model.PriceResponse;
-import com.neoris.commerce.prices.repository.PriceRepository;
 import com.neoris.commerce.prices.service.PriceService;
 import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.math.BigInteger;
 import java.time.LocalDateTime;
 import java.util.HashMap;
 import java.util.Map;
