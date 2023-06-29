@@ -55,6 +55,21 @@ The price data is stored in a relational database, such as MySQL or PostgreSQL, 
 - `PRICE`: Final selling price.
 - `CURR`: ISO currency code.
 
+## Test scenarios defined by the technical exam
+
+NOTE: Below you can find the test scenarios required by the technical examen related to the test names in the PriceControllerIntegrationTest class
+
+-  Test 1: petición a las 10:00 del día 14 del producto 35455   para la brand 1 (ZARA) => getPrice_duringStandardDateTimePrice_thenReturnsPriceResponse()
+-  Test 2: petición a las 16:00 del día 14 del producto 35455   para la brand 1 (ZARA) => getPrice_duringDateTimeWith30PercentDiscount_thenReturnsPriceResponse()
+-  Test 3: petición a las 21:00 del día 14 del producto 35455   para la brand 1 (ZARA) => getPrice_duringDateTimeWithoutDiscount_thenReturnsPriceResponse()
+-  Test 4: petición a las 10:00 del día 15 del producto 35455   para la brand 1 (ZARA) => getPrice_duringDateTimeWith15PercentDiscount_thenReturnsPriceResponse()
+-  Test 5: petición a las 21:00 del día 16 del producto 35455   para la brand 1 (ZARA) => getPrice_duringDateTimeWith10PercentSurcharge_thenReturnsPriceResponse()
+
+## Unit testing
+
+- Additional unit tests added to the service class of the project : `PriceServiceTest`.
+- Those unit tests were designed using TestDataBuilder classes to build dummy objects for testing purposes : `PriceEntityDataBuilder`,`PriceResponseDataBuilder`
+  
 ## Contact
 If you have any questions, suggestions, or feedback regarding the prices repository or API, please feel free to reach out to us. You can contact the repository owner, Sergio, through the contact information provided in the repository's README file.
 
