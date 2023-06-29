@@ -3,6 +3,7 @@ plugins {
 	id 'org.springframework.boot' version '2.7.13'
 	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
 	id 'jacoco'
+	id 'org.sonarqube' version '3.3'
 }
 
 group = 'com.neoris.commerce'
@@ -60,5 +61,17 @@ jacocoTestReport {
 		classDirectories.setFrom(files(classDirectories.files.collect {
 			fileTree(dir: it, include: ['**/PriceService.class', '**/PriceController.class'])
 		}))
+	}
+}
+
+sonarqube {
+	properties {
+		property 'sonar.projectName', 'Prices'
+		property 'sonar.projectKey', 'com.neoris.commerce.prices'
+		property 'sonar.host.url', 'http://localhost:9000'
+		property 'sonar.sources', 'src/main'
+		property 'sonar.tests', 'src/test'
+		property 'sonar.java.binaries', 'build/classes/java/main'
+		property 'sonar.java.libraries', 'build/libs/*.jar'
 	}
 }

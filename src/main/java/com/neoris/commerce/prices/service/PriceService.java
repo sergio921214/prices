@@ -25,7 +25,7 @@ public class PriceService {
     private PriceMapper priceMapper;
 
     public PriceResponse handle (Map<String, Object> params) {
-        return ((Function<Map, SearchPriceContext>)this::buildContext)
+        return ((Function<Map<String, Object>, SearchPriceContext>)this::buildContext)
                 .andThen(this::validateRequest)
                 .andThen(this::getPriceByDateTimeAndProductAndBrand)
                 .apply(params);
