@@ -30,9 +30,11 @@ To set up and use the **prices** API, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/sergio921214/prices.git`
 2. Navigate to the project directory: `cd prices`
-3. Build the project: `gradle build`
-4. Start the server: `gradle bootRun`
+3. Build the project: `gradlew build`
+4. Start the server: `gradlew bootRun`
 5. Access the API at `http://localhost:8080`
+6. Execute JacocoTestReport analysis: `gradlew jacocoTestReport`
+7. Check sonar code analysys refer: `https://sonarcloud.io/summary/overall?id=sergio921214_prices`
 
 ## Example
 
