@@ -36,22 +36,24 @@ To set up and use the **prices** API, follow these steps:
 
 ## Example
 
+GET /prices?product=example-product&category=example-category&date=2023-06-28T00:00:00
+
 ## Get Prices
 
-GET /prices?product=example-product&category=example-category&date=2023-06-28T00:00:00
 
 ## Data Format
 The price data is stored in a relational database, such as MySQL or PostgreSQL, and accessed using an ORM like Hibernate. Each price entry consists of the following fields:
 
-BRAND_ID: Foreign key of the brand group (1 = ZARA).
-START_DATE: Start date of the indicated price rate.
-END_DATE: End date of the indicated price rate.
-PRICE_LIST: Identifier of the applicable price list.
-PRODUCT_ID: Product code identifier.
-PRIORITY: Price application disambiguator. If two price lists overlap in a date range, the one with the higher priority (higher numeric value) is applied.
-PRICE: Final selling price.
-CURR: ISO currency code.
-Contact
+- `BRAND_ID`: Foreign key of the brand group (1 = ZARA).
+- `START_DATE`: Start date of the indicated price rate.
+- `END_DATE`: End date of the indicated price rate.
+- `PRICE_LIST`: Identifier of the applicable price list.
+- `PRODUCT_ID`: Product code identifier.
+- `PRIORITY`: Price application disambiguator. If two price lists overlap in a date range, the one with the higher priority (higher numeric value) is applied.
+- `PRICE`: Final selling price.
+- `CURR`: ISO currency code.
+
+## Contact
 If you have any questions, suggestions, or feedback regarding the prices repository or API, please feel free to reach out to us. You can contact the repository owner, Sergio, through the contact information provided in the repository's README file.
 
 We hope you find the prices API useful for retrieving price data and integrating it into your Gradle projects. Enjoy exploring and utilizing the endpoint!
