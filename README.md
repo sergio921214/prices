@@ -36,21 +36,19 @@ To set up and use the **prices** API, follow these steps:
 
 ## Example
 
-### Get Prices
+## Get Prices
 
-```http
-GET /prices?product=example-product&category=example-category&date=2023-06-28T00:00:00
 Data Format
 The price data is stored in a relational database, such as MySQL or PostgreSQL, and accessed using an ORM like Hibernate. Each price entry consists of the following fields:
 
-BRAND_ID: foreign key de la cadena del grupo (1 = ZARA).
-START_DATE , END_DATE: rango de fechas en el que aplica el precio tarifa indicado.
-PRICE_LIST: Identificador de la tarifa de precios aplicable.
-PRODUCT_ID: Identificador código de producto.
-PRIORITY: Desambiguador de aplicación de precios. Si dos tarifas coinciden en un rago de fechas se aplica la de mayor prioridad (mayor valor numérico).
-PRICE: precio final de venta.
-CURR: iso de la moneda.
-
+BRAND_ID: Foreign key of the brand group (1 = ZARA).
+START_DATE: Start date of the indicated price rate.
+END_DATE: End date of the indicated price rate.
+PRICE_LIST: Identifier of the applicable price list.
+PRODUCT_ID: Product code identifier.
+PRIORITY: Price application disambiguator. If two price lists overlap in a date range, the one with the higher priority (higher numeric value) is applied.
+PRICE: Final selling price.
+CURR: ISO currency code.
 Contact
 If you have any questions, suggestions, or feedback regarding the prices repository or API, please feel free to reach out to us. You can contact the repository owner, Sergio, through the contact information provided in the repository's README file.
 
