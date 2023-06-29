@@ -1,8 +1,8 @@
-# prices
+# Neoris technical challenge
 
-Welcome to the **prices** repository!
+Welcome to the **prices-project** repository!
 
-This repository contains a Gradle project that provides an API for retrieving price data for various products. The API offers a single endpoint to fetch price information based on specific criteria.
+This repository contains a Java Spring project + Gradle that provides an API for retrieving price data for various products. The API offers a single endpoint to fetch price information based on specific criteria.
 
 ## Endpoint
 
