@@ -43,7 +43,7 @@ class PriceControllerIntegrationTest {
                 .build();
 
         // Act
-        mockMvc.perform(get("/prices")
+        mockMvc.perform(get("/prices/get-price")
                         .param("applicationDate", applicationDate.toString())
                         .param("productId", productId.toString())
                         .param("brandId", brandId.toString()))
@@ -72,7 +72,7 @@ class PriceControllerIntegrationTest {
                 .build();
 
         // Act
-        mockMvc.perform(get("/prices")
+        mockMvc.perform(get("/prices/get-price")
                         .param("applicationDate", applicationDate.toString())
                         .param("productId", productId.toString())
                         .param("brandId", brandId.toString()))
@@ -101,7 +101,7 @@ class PriceControllerIntegrationTest {
                 .build();
 
         // Act
-        mockMvc.perform(get("/prices")
+        mockMvc.perform(get("/prices/get-price")
                         .param("applicationDate", applicationDate.toString())
                         .param("productId", productId.toString())
                         .param("brandId", brandId.toString()))
@@ -130,7 +130,7 @@ class PriceControllerIntegrationTest {
                 .build();
 
         // Act
-        mockMvc.perform(get("/prices")
+        mockMvc.perform(get("/prices/get-price")
                         .param("applicationDate", applicationDate.toString())
                         .param("productId", productId.toString())
                         .param("brandId", brandId.toString()))
@@ -159,7 +159,7 @@ class PriceControllerIntegrationTest {
                 .build();
 
         // Act
-        mockMvc.perform(get("/prices")
+        mockMvc.perform(get("/prices/get-price")
                         .param("applicationDate", applicationDate.toString())
                         .param("productId", productId.toString())
                         .param("brandId", brandId.toString()))

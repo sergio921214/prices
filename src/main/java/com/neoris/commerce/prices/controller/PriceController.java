@@ -23,7 +23,7 @@ public class PriceController {
     @Autowired
     private PriceService service;
 
-    @GetMapping
+    @GetMapping("/get-price")
     public ResponseEntity<PriceResponse> getPrices(
             @RequestParam("applicationDate") @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime applicationDate,
             @RequestParam("productId") Long productId,
