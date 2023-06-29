@@ -40,7 +40,7 @@ public class Price {
     private Integer priority;
 
     @Column(name = "PRICE")
-    private BigDecimal price;
+    private BigDecimal finalPrice;
 
     @Column(name = "CURR")
     private String currency;

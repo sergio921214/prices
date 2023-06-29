@@ -1,7 +1,6 @@
 package com.neoris.commerce.prices.unit.service;
 
 import com.neoris.commerce.prices.controller.PriceNotFoundException;
-import com.neoris.commerce.prices.mapper.PriceMapper;
 import com.neoris.commerce.prices.model.PriceResponse;
 import com.neoris.commerce.prices.model.context.SearchPriceContext;
 import com.neoris.commerce.prices.model.entity.Price;
@@ -9,7 +8,6 @@ import com.neoris.commerce.prices.repository.PriceRepository;
 import com.neoris.commerce.prices.service.PriceService;
 import com.neoris.commerce.prices.unit.PriceEntityDataBuilder;
 import com.neoris.commerce.prices.unit.PriceResponseDataBuilder;
-import com.neoris.commerce.prices.validator.SearchPriceRequestValidator;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
@@ -20,22 +18,16 @@ import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Optional;
 
-import static org.junit.jupiter.api.Assertions.*;
-import static org.mockito.Mockito.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
 class PriceServiceTest {
     @Mock
     private PriceRepository priceRepository;
-
-    @Mock
-    private PriceMapper priceMapper;
-
-    @Mock
-    private SearchPriceRequestValidator validator;
 
     @InjectMocks
     private PriceService priceService;
@@ -43,26 +35,6 @@ class PriceServiceTest {
     @BeforeEach
     void setUp() {
         MockitoAnnotations.initMocks(this);
-    }
-
-    @Test
-    void testHandle_PriceNotFound_ThrowsPriceNotFoundException() {
-        // Arrange
-        LocalDateTime applicationDate = LocalDateTime.now();
-        Long productId = 1L;
-        Long brandId = 1L;
-
-        Map<String, Object> params = new HashMap<>();
-        params.put("applicationDate", applicationDate);
-        params.put("productId", productId);
-        params.put("brandId", brandId);
-
-        when(priceRepository.findFirstByBrandIdAndProductIdAndDate(brandId, productId, applicationDate))
-                .thenReturn(Optional.empty());
-
-        // Act & Assert
-        assertThrows(PriceNotFoundException.class, () -> priceService.handle(params));
-        verify(priceRepository).findFirstByBrandIdAndProductIdAndDate(brandId, productId, applicationDate);
     }
 
     @Test

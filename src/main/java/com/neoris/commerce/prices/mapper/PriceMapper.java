@@ -7,6 +7,8 @@ import org.springframework.stereotype.Component;
 @Component
 public class PriceMapper {
 
+    private PriceMapper() {}
+
     public static PriceResponse priceToPriceResponse(Price price) {
         return PriceResponse.builder()
                 .productId(price.getProductId())
@@ -14,7 +16,7 @@ public class PriceMapper {
                 .priceList(price.getPriceList())
                 .startDate(price.getStartDate())
                 .endDate(price.getEndDate())
-                .price(price.getPrice())
+                .price(price.getFinalPrice())
                 .build();
     }
 }

@@ -71,7 +71,7 @@ public class PriceEntityDataBuilder {
                 .priceList(priceList)
                 .productId(productId)
                 .priority(priority)
-                .price(price)
+                .finalPrice(price)
                 .currency(currency)
                 .build();
     }

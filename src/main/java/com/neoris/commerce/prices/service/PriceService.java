@@ -21,8 +21,6 @@ import java.util.function.Function;
 public class PriceService {
     @Autowired
     private PriceRepository priceRepository;
-    @Autowired
-    private PriceMapper priceMapper;
 
     public PriceResponse handle (Map<String, Object> params) {
         return ((Function<Map<String, Object>, SearchPriceContext>)this::buildContext)
@@ -51,7 +49,7 @@ public class PriceService {
     public PriceResponse getPriceByDateTimeAndProductAndBrand(SearchPriceContext context) {
         Optional<Price> elegibleProduct = priceRepository.findFirstByBrandIdAndProductIdAndDate(context.getBrandId(), context.getProductId(), context.getApplicationDate());
         if (elegibleProduct.isPresent()) {
-            return priceMapper.priceToPriceResponse(elegibleProduct.get());
+            return PriceMapper.priceToPriceResponse(elegibleProduct.get());
         }
         throw new PriceNotFoundException("Price not found for the given criteria.");
     }

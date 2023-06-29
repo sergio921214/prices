@@ -28,7 +28,7 @@ class PriceControllerIntegrationTest {
     private MockMvc mockMvc;
 
     @Test
-    void getPrice_duringStandardPriceDate_thenReturnsPriceResponse() throws Exception {
+    void getPrice_duringStandardDateTimePrice_thenReturnsPriceResponse() throws Exception {
         // Arrange
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 10, 0, 0);
         Long productId = 35455L;
@@ -57,7 +57,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void getPrice_during30PercentDiscountPriceDate_thenReturnsPriceResponse() throws Exception {
+    void getPrice_duringDateTimeWith30PercentDiscount_thenReturnsPriceResponse() throws Exception {
         // Arrange
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 16, 0, 0);
         Long productId = 35455L;
@@ -86,7 +86,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void getPrice_duringNoDiscountPriceDate_thenReturnsPriceResponse() throws Exception {
+    void getPrice_duringDateTimeWithoutDiscount_thenReturnsPriceResponse() throws Exception {
         // Arrange
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 14, 21, 0, 0);
         Long productId = 35455L;
@@ -115,7 +115,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void getPrice_during15PercentDiscountPriceDate_thenReturnsPriceResponse() throws Exception {
+    void getPrice_duringDateTimeWith15PercentDiscount_thenReturnsPriceResponse() throws Exception {
         // Arrange
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 15, 10, 0, 0);
         Long productId = 35455L;
@@ -144,7 +144,7 @@ class PriceControllerIntegrationTest {
     }
 
     @Test
-    void getPrice_during10PercentExtraChargePriceDate_thenReturnsPriceResponse() throws Exception {
+    void getPrice_duringDateTimeWith10PercentSurcharge_thenReturnsPriceResponse() throws Exception {
         // Arrange
         LocalDateTime applicationDate = LocalDateTime.of(2020, 6, 16, 21, 0, 0);
         Long productId = 35455L;
