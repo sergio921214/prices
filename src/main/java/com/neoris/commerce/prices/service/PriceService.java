@@ -1,10 +1,10 @@
 package com.neoris.commerce.prices.service;
 
-import com.neoris.commerce.prices.controller.PriceNotFoundException;
 import com.neoris.commerce.prices.mapper.PriceMapper;
 import com.neoris.commerce.prices.model.PriceResponse;
 import com.neoris.commerce.prices.model.context.SearchPriceContext;
 import com.neoris.commerce.prices.model.entity.Price;
+import com.neoris.commerce.prices.model.exception.PriceNotFoundException;
 import com.neoris.commerce.prices.repository.PriceRepository;
 import com.neoris.commerce.prices.validator.SearchPriceRequestValidator;
 import lombok.Builder;

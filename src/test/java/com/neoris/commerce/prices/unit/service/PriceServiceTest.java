@@ -1,6 +1,6 @@
 package com.neoris.commerce.prices.unit.service;
 
-import com.neoris.commerce.prices.controller.PriceNotFoundException;
+import com.neoris.commerce.prices.model.exception.PriceNotFoundException;
 import com.neoris.commerce.prices.model.PriceResponse;
 import com.neoris.commerce.prices.model.context.SearchPriceContext;
 import com.neoris.commerce.prices.model.entity.Price;

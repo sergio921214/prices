@@ -1,7 +1,7 @@
 package com.neoris.commerce.prices.validator;
 
-import com.neoris.commerce.prices.controller.PriceNotFoundException;
 import com.neoris.commerce.prices.model.context.SearchPriceContext;
+import com.neoris.commerce.prices.model.exception.PriceNotFoundException;
 
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
