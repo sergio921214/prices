@@ -38,7 +38,9 @@ To set up and use the **prices** API, follow these steps:
 
 ## Get Prices
 
-Data Format
+GET /prices?product=example-product&category=example-category&date=2023-06-28T00:00:00
+
+## Data Format
 The price data is stored in a relational database, such as MySQL or PostgreSQL, and accessed using an ORM like Hibernate. Each price entry consists of the following fields:
 
 BRAND_ID: Foreign key of the brand group (1 = ZARA).
