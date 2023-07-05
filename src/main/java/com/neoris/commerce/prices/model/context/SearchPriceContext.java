@@ -1,15 +1,13 @@
 package com.neoris.commerce.prices.model.context;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 import java.time.LocalDateTime;
 
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@Getter
 @Builder
 public class SearchPriceContext {
     private LocalDateTime applicationDate;

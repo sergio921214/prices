@@ -19,7 +19,7 @@ public class ExceptionHandlerController {
                 .message(ex.getMessage())
                 .timestamp(LocalDateTime.now())
                 .build();
-        return new ResponseEntity<ErrorResponse>(response, HttpStatus.NOT_FOUND);
+        return new ResponseEntity<>(response, HttpStatus.NOT_FOUND);
     }
 }
 
